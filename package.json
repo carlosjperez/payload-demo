@@ -1,0 +1,46 @@
+{
+  "name": "payload-demo",
+  "version": "1.0.0",
+  "description": "Pure Payload CMS demo for exploration",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts next dev",
+    "build": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts next build",
+    "start": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts next start",
+    "generate:types": "payload generate:types",
+    "generate:schema": "payload generate:db-schema",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.0.0",
+    "@payloadcms/next": "^3.0.0",
+    "@payloadcms/richtext-lexical": "^3.0.0",
+    "@payloadcms/ui": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.8.1",
+    "next": "^15.0.0",
+    "payload": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "jsdom": "^27.3.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.15"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}
