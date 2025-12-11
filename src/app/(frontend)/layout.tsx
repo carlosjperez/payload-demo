@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Demo project for exploring Payload CMS',
 }
 
-export default function RootLayout({
+export default function FrontendLayout({
   children,
 }: {
   children: React.ReactNode
